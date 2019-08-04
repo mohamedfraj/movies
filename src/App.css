@@ -1,33 +1,98 @@
-.App {
-  text-align: center;
+/* css search - etoile */
+
+.input{
+  border-radius: 5px;
+  color: rgb(255, 4, 4);
+  width: 600px;
+  height: auto;
+  padding-left:5px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.buttonetinput{
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input:hover{
+  background-color: aqua;
+}
+
+.button{
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  width:20pc;
+}
+.button:hover{
+  background-color: red;
+}
+
+.titredesetoile{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+
+.titre-etoile{
   display: flex;
   flex-direction: column;
+  text-align: center;
+  padding:5px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.input-searsh-title-etoile{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0;  
+}
+.etoile{
+  font-size: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*  css card */
+
+.card{
+  position: relative;
+  width: 350px;
+  height: auto; 
+  border-radius: 5px;  
+  margin: 5px
 }
+
+.listecards{
+ display: flex;
+ flex-wrap: wrap;
+} 
+
+.rating{
+  position: absolute; 
+  z-index: 3; 
+  right: 0;
+  margin-right: 5px;
+}
+
+.imgcard{
+  width: 100%;
+  height: 450px;
+  position: relative;
+  top: 0%
+}
+
+.titre-decard{
+  text-align: center;
+  font-family:monospace;
+  font-size: 18px;
+}
+/*css card modal */
+
+
+.add-movie{
+  border:2px solid black;
+  border-radius: 5px; 
+  height: 560px; 
+  padding-top:190px; 
+  width: 350px;
+  font-size: 80px;
+  text-align: center;
+  margin: 5px
+} 
