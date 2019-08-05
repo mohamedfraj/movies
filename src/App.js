@@ -34,19 +34,26 @@ class App extends Component {
     this.state = {
       value: "",
       rating:1,
-      mytab: tab
+      mytab: tab,
+      isloading: false
     }
+  }
+
+  componentDidMount(){
+    setTimeout(() => {
+      this.setState({isloading: true})
+    }, 2000);
   }
 
   addmovie=()=>{
 
     var titre = prompt('titre')
     var rating = prompt('rating')
-    var image = prompt('image')
+    var imag = prompt('image')
 
     if (titre==='' || rating==='') return
     this.setState({
-      mytab:this.state.mytab.concat({etoile: rating, titre: titre, image:image='https://www.mearto.com/assets/no-image-83a2b680abc7af87cfff7777d0756fadb9f9aecd5ebda5d34f8139668e0fc842.png'})
+      mytab:this.state.mytab.concat({etoile: rating, titre: titre, image:imag='https://www.mearto.com/assets/no-image-83a2b680abc7af87cfff7777d0756fadb9f9aecd5ebda5d34f8139668e0fc842.png'})
     })
 }
   render() {
@@ -62,7 +69,7 @@ class App extends Component {
             rating:newrating 
           })}
         />
-        <MovieListe addmovie={this.addmovie}
+        <MovieListe addmovie={this.addmovie} isloading={this.state.isloading}
           movietab={this.state.mytab.filter(el=>el.titre.toUpperCase().includes(this.state.value.toUpperCase().trim()) && el.etoile>=this.state.rating)} />
 
       </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from "react-bootstrap";
 import MovieCard from './moviecard';
+import LoaderHOC from './LoaderHOC';
 
 
 class MovieList extends Component {
@@ -28,4 +29,4 @@ class MovieList extends Component {
     }
 }
 
-export default MovieList;
+export default LoaderHOC(MovieList);
